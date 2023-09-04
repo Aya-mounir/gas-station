@@ -1,0 +1,28 @@
+.gas_station_navbar {
+  height: 7rem;
+
+  .monitored,
+  .last_update {
+    .dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      background: #ff7f5c 0% 0% no-repeat padding-box;
+    }
+    img {
+      height: 2rem;
+      width: 2.35rem;
+    }
+    span {
+      color: #3d5161;
+      font: normal normal normal 2rem "Roboto-Regular";
+      line-height: 1.5rem;
+    }
+    p {
+      color: #3d5161;
+      font: normal normal normal 0.85rem "Roboto-Regular";
+    }
+  }
+}

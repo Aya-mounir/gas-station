@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardListComponent } from './dashboard-list/dashboard-list.component';
 
 const routes: Routes = [
-  {path:'dashboard',component:DashboardListComponent}
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardListComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}
