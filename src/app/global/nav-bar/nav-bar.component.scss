@@ -1,8 +1,18 @@
 .gas_station_navbar {
+  background: #fff;
   height: 7rem;
-
+  @media (max-width:700px) {
+    height: 12rem;
+  }
+  @media (max-width:453px) {
+    height: 18rem;
+  }
   .monitored,
   .last_update {
+     i{
+          font-size: 1.5rem;
+          color: #2C3E50;
+        }
     .dot {
       height: 0.5rem;
       width: 0.5rem;
@@ -23,6 +33,83 @@
     p {
       color: #3d5161;
       font: normal normal normal 0.85rem "Roboto-Regular";
+    }
+  }
+  .date{
+    width: 29rem;
+    height: 2rem;
+    .start,.end{
+      height: 100%;
+      .arrow_right {
+        width: 0;
+        height: 0;
+        border-top: 0.6rem solid transparent;
+        border-bottom: 0.6rem solid transparent;
+        border-left: 0.6rem solid #FF7F5C;
+      }
+      .square{
+        width: 0.8rem;
+        height: 0.8rem;
+        background: #FF7F5C;
+      }
+      .start_content,.end_content{
+        width: 12rem;
+        border-bottom: 2px solid #3D5161;
+        p.start,p.end{
+          color:#3D5161;
+          font-family: 'Roboto-Medium';
+          font-size: 0.9rem;
+          line-height: auto;
+          line-height: 1rem;
+          span{
+            font-size: 0.85rem;
+            font-family: 'Roboto-Regular';
+          }
+
+        }
+        i{
+          font-size: 1.5rem;
+          color: #2C3E50;
+        }
+      }
+
+    }
+  }
+}
+::ng-deep{
+  .gas_station_navbar{
+    .p-selectbutton {
+      height: 2rem;
+      border-radius: 50px;
+      background: #F9F5F3;
+      .p-button,.p-button:not(.p-disabled):not(.p-highlight):hover{
+        border: none !important;
+        border-radius: 50px !important;
+        background: #F9F5F3;
+        font-family: 'Montserrat-Bold';
+        font-size: 0.8rem;
+        .p-button-label{
+          color: #3D5161;
+          font-size: 0.8rem;
+          font-family: 'Montserrat-Regular';
+          letter-spacing: 1.4px;
+        }
+      }
+       .p-button.p-highlight,
+      .p-button.p-highlight:hover{
+        background: #FF7F5C !important;
+        height: 100%;
+        color: #fff;
+        .p-button-label{
+          color: #fff;
+          font-family: 'Montserrat-Bold';
+        font-size: 0.8rem;
+        }
+      }
+      .p-button:focus{
+        box-shadow: none !important;
+        border-radius: 50px;
+      }
     }
   }
 }

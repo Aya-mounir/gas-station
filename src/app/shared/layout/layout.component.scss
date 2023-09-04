@@ -5,5 +5,9 @@
 .dashboard_layout {
   .inner_page {
     width: 94.1%;
+    background: #F9F5F3;
+    @media (max-width:1076px) {
+      width: 93%;
+    }
   }
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-list.component.scss']
 })
 export class DashboardListComponent {
+  stateOptions: any[] = [
+
+    { label: 'GRAPH', value: 'GRAPH', icon: 'fa-solid fa-chart-simple' }, { label: 'LIST', value: 'LisLISTt', icon: 'fa-solid fa-bars' },];
+  value: string = 'GRAPH';
 
 }

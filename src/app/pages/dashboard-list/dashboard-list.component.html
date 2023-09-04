@@ -1,1 +1,44 @@
-<p>dashboard-list works!</p>
+<div class="dashboard flex w-full justify-content-between">
+  <div class="content">
+    <div class="cards justify-content-evenly flex grid">
+      <div class="card_selected flex flex-column justify-content-between">
+        <div class="amount">71.028 <span>EGP</span></div>
+        <p class="head">Total Vlaue</p>
+        <div class="flex arrow">
+          <div class="arrow_bottom mr-2"></div>
+          <p class="bottom">2%</p>
+        </div>
+      </div>
+      <div class="card flex flex-column justify-content-between">
+        <div class="amount">20,000 <span>㎥</span></div>
+        <p class="head">Total Sales</p>
+        <div class="flex arrow">
+          <div class="arrow_top mr-2"></div>
+          <p class="up">50 ㎥</p>
+        </div>
+      </div>
+      <div class="card flex flex-column justify-content-between">
+        <div class="amount">20,000 <span>㎥</span></div>
+        <p class="head">Avg Sales</p>
+        <div class="flex arrow">
+          <div class="arrow_bottom mr-2"></div>
+          <p class="bottom">50 ㎥</p>
+        </div>
+      </div>
+      <div class="card flex flex-column justify-content-between">
+        <div class="amount">1567</div>
+        <p class="head">Total Transaction Count</p>
+        <div class="flex arrow">
+          <div class="arrow_top mr-2"></div>
+          <p class="up">20</p>
+        </div>
+      </div>
+    </div>
+    <div class="card days flex justify-content-end my-5 w-full">
+      <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value"></p-selectButton>
+  </div>
+  </div>
+  <!-- right side -->
+  <app-dashboard-right-side class="right_Side"></app-dashboard-right-side>
+  <!-- right side -->
+</div>
