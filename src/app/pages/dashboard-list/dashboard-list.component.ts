@@ -52,7 +52,7 @@ export class DashboardListComponent {
       plugins: {
         legend: {
           labels: {
-            color: documentStyle.getPropertyValue('--primary-50'),
+            color: documentStyle.getPropertyValue('--surface-0'),
           },
         },
       },
@@ -65,7 +65,7 @@ export class DashboardListComponent {
             },
           },
           grid: {
-            color: documentStyle.getPropertyValue('--bluegray-200'),
+            color: documentStyle.getPropertyValue('--surface-0'),
             drawBorder: false,
           },
         },
