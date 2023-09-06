@@ -5,6 +5,7 @@
     @media (max-width: 1300px) {
       width: 100%;
       order: 2;
+      padding: 1rem !important;
     }
 
     .cards {
@@ -14,6 +15,9 @@
         margin: 0.5rem;
         border-radius: 24px;
         background: #f4dbd4;
+        @media (max-width: 550px) {
+          width: 100%;
+        }
         .amount {
           font-family: "Roboto-Regular";
           font-size: 2.4rem;
@@ -54,6 +58,9 @@
         padding: 1rem;
         border-radius: 24px;
         background: #fff;
+        @media (max-width: 550px) {
+          width: 100%;
+        }
         .amount {
           font-family: "Roboto-Regular";
           font-size: 2.4rem;
@@ -201,6 +208,36 @@
   }
 }
 ::ng-deep {
+  #dual-axes-chart {
+    text {
+      color: #fff !important;
+      cursor: default;
+      font-size: 0.7em !important;
+      fill: #fff !important;
+    }
+    .highcharts-data-label-connector {
+      fill: transparent !important;
+    }
+    .highcharts-background {
+      fill: transparent !important;
+      background-color: transparent;
+    }
+    .highcharts-title,
+    .highcharts-data-label,
+    .highcharts-credits {
+      display: none;
+    }
+    .highcharts-color-0 {
+      stroke: unset;
+    }
+    .highcharts-color-1 {
+      stroke: unset;
+      border-radius: 300.213px !important;
+    }
+    path.highcharts-point.highcharts-color-0 {
+      fill: #00acc3;
+    }
+  }
   .dashboard {
     .p-selectbutton {
       height: 2rem;

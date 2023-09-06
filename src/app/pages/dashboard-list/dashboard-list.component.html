@@ -211,7 +211,7 @@
       </div>
       <div class="graph w-full" *ngIf="value=='GRAPH'">
         <div class="row">
-          <div class="header mb-2 flex justify-content-between">
+          <div class="header mb-2 flex justify-content-evenly">
             <div class="left flex align-items-end">
               <p class="heading py-3">STATIONS ACTIVATES OVERVIEW</p>
             </div>
@@ -225,7 +225,8 @@
             </div>
           </div>
           <hr>
-          <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+          <p-chart style="stroke-width: 2px;" type="bar" [data]="data" [options]="options">
+          </p-chart>
         </div>
       </div>
     </div>

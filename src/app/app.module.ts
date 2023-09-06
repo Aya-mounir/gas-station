@@ -7,15 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChartModule } from 'primeng/chart';
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    ChartModule
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

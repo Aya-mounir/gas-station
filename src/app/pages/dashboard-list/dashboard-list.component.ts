@@ -40,6 +40,8 @@ export class DashboardListComponent {
           backgroundColor: documentStyle.getPropertyValue('--red-400'),
           borderColor: documentStyle.getPropertyValue('--red-400'),
           data: [80, 81, 56, 55, 40],
+          fill: false,
+          barPercentage: 0.1,
         },
       ],
     };
@@ -76,6 +78,7 @@ export class DashboardListComponent {
             drawBorder: false,
           },
         },
+        xAxes: [{}],
       },
     };
   }
