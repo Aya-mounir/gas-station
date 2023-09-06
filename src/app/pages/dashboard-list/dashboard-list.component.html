@@ -200,8 +200,11 @@
           </div>
         </div>
       </div>
-      <div class="garph" *ngIf="value == 'GRAPH'"></div>
-    </div>
+      <div class="graph w-full" *ngIf="value=='GRAPH'">
+        <div class="card">
+          <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+        </div>
+      </div>    </div>
   </div>
   <!-- right side -->
   <app-dashboard-right-side class="right_Side"></app-dashboard-right-side>

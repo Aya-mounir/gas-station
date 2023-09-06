@@ -9,11 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
-  declarations: [
-    DashboardListComponent
-  ],
+  declarations: [DashboardListComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
@@ -22,7 +21,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     FormsModule,
     OverlayPanelModule,
     ButtonModule,
-    CheckboxModule
-  ]
+    CheckboxModule,
+    ChartModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}

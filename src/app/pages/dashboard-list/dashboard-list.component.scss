@@ -1,5 +1,5 @@
-.dashboard{
-  .content{
+.dashboard {
+  .content {
     padding: 3rem 1rem 1rem 3rem;
     width: 75%;
     .cards{
@@ -8,42 +8,40 @@
         padding: 1rem;
         margin: 0.5rem;
         border-radius: 24px;
-        background: #F4DBD4;
+        background: #f4dbd4;
 
-        .amount{
-          font-family: 'Roboto-Regular';
+        .amount {
+          font-family: "Roboto-Regular";
           font-size: 2.4rem;
-          color: #3D5161;
-          span{
+          color: #3d5161;
+          span {
             font-size: 1.2rem;
           }
-
         }
-        .arrow{
-          .arrow_bottom{
+        .arrow {
+          .arrow_bottom {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 0;
             height: 0;
-            border-left: 0.6rem solid transparent;
-            border-right: 0.6rem solid transparent;
-            border-top: 0.6rem solid #FF7F5C;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-top: 0.6rem solid #ff7f5c;
             margin-top: 0.4rem;
           }
-          p{
-            color: #FF7F5C;
-            font-family: 'Roboto-Regular';
+          p {
+            color: #ff7f5c;
+            font-family: "Roboto-Regular";
             font-size: 1rem;
           }
         }
 
-        .head{
+        .head {
           margin: 0.5rem 0;
-          font-family: 'Montserrat-Bold';
+          font-family: "Montserrat-Bold";
           font-size: 1rem;
-          color: #3D5161;
-
+          color: #3d5161;
         }
       }
       .card{
@@ -52,56 +50,54 @@
         padding: 1rem;
         border-radius: 24px;
         background: #fff;
-        .amount{
-          font-family: 'Roboto-Regular';
+        .amount {
+          font-family: "Roboto-Regular";
           font-size: 2.4rem;
-          color: #3D5161;
-          span{
+          color: #3d5161;
+          span {
             font-size: 1.2rem;
           }
-
         }
-        .arrow{
-          .arrow_bottom{
+        .arrow {
+          .arrow_bottom {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 0;
             height: 0;
-            border-left: 0.6rem solid transparent;
-            border-right: 0.6rem solid transparent;
-            border-top: 0.6rem solid #FF7F5C;
-            margin-top: 0.4rem;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-top: 0.6rem solid #ff7f5c;
+            margin-top: 0.3rem;
           }
-          .arrow_top{
+          .arrow_top {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 0;
             height: 0;
-            border-left: 0.6rem solid transparent;
-            border-right: 0.6rem solid transparent;
-            border-bottom: 0.6rem solid #00CBC0;
-            margin-top: 0.4rem;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-bottom: 0.6rem solid #00cbc0;
+            margin-top: 0.3rem;
           }
-          p.bottom{
-            color: #FF7F5C;
-            font-family: 'Roboto-Regular';
-            font-size: 1rem;
+          p.bottom {
+            color: #ff7f5c;
+            font-family: "Roboto-Regular";
+            font-size: 0.9rem;
           }
-          p.up{
-            color: #00CBC0;
-            font-family: 'Roboto-Regular';
-            font-size: 1rem;
+          p.up {
+            color: #00cbc0;
+            font-family: "Roboto-Regular";
+            font-size: 0.9rem;
           }
         }
 
-        .head{
+        .head {
           margin: 0.5rem 0;
-          font-family: 'Montserrat-Bold';
+          font-family: "Montserrat-Bold";
           font-size: 1rem;
-          color: #3D5161;
-
+          color: #3d5161;
         }
       }
     }
@@ -184,31 +180,32 @@
       height: 2rem;
       border-radius: 50px;
       background: #fff;
-      .p-button,.p-button:not(.p-disabled):not(.p-highlight):hover{
+      .p-button,
+      .p-button:not(.p-disabled):not(.p-highlight):hover {
         border: none !important;
         border-radius: 50px !important;
         background: #fff;
-        font-family: 'Montserrat-Bold';
+        font-family: "Montserrat-Bold";
         font-size: 0.8rem;
-        .p-button-label{
-          color: #3D5161;
+        .p-button-label {
+          color: #3d5161;
           font-size: 0.8rem;
-          font-family: 'Montserrat-Regular';
+          font-family: "Montserrat-Regular";
           letter-spacing: 1.4px;
         }
       }
-       .p-button.p-highlight,
-      .p-button.p-highlight:hover{
-        background: #FF7F5C !important;
+      .p-button.p-highlight,
+      .p-button.p-highlight:hover {
+        background: #ff7f5c !important;
         height: 100%;
         color: #fff;
-        .p-button-label{
+        .p-button-label {
           color: #fff;
-          font-family: 'Montserrat-Bold';
-        font-size: 0.8rem;
+          font-family: "Montserrat-Bold";
+          font-size: 0.8rem;
         }
       }
-      .p-button:focus{
+      .p-button:focus {
         box-shadow: none !important;
         border-radius: 50px;
       }

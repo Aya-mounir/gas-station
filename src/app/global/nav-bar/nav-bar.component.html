@@ -2,38 +2,39 @@
   <div class="monitored flex align-items-end ">
     <span class="dot"></span>
     <img class="mx-2" src="../../../assets/images/pages/gas-station-black.svg" alt="">
-    <span class="mx-1">2/3</span>
+    <span class="mx-2">2/3</span>
     <p>Monitored<br>Stations</p>
   </div>
   <div class="last_update flex align-items-end ">
     <span class="dot"></span>
     <i class="fa-solid fa-rotate-left mx-2"></i>
-    <span class="mx-1">20s</span>
+    <span class="mx-2">20s</span>
     <p>Last<br>Update</p>
   </div>
   <div class="card days flex justify-content-center ">
-    <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value"></p-selectButton>
-</div>
+    <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label"
+      optionValue="value"></p-selectButton>
+  </div>
   <div class="date flex grid sm:justify-content-between justify-content-center">
     <div class="start flex ">
       <div class="arrow_right mr-2"></div>
       <div class="flex start_content">
         <p class="start">
-        Start
-        <span>date - time</span>
-      </p>
-      <i class="fa-light fa-calendar-clock"></i>
-    </div>
+          Start
+          <span>date - time</span>
+        </p>
+        <i class="fa-solid fa-calendar"></i>
+      </div>
     </div>
     <div class="end flex ">
       <div class="square mr-2"></div>
       <div class="flex end_content">
         <p class="end">
-        End
-        <span>date - time</span>
-      </p>
-      <i class="fa-light fa-calendar-clock"></i>
-    </div>
+          End
+          <span>date - time</span>
+        </p>
+        <i class="fa-solid fa-calendar"></i>
+      </div>
     </div>
   </div>
 </div>
