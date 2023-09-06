@@ -6,17 +6,17 @@ import { DashboardListComponent } from './dashboard-list/dashboard-list.componen
 import { DashboardRightSideModule } from '../global/dashboard-right-side/dashboard-right-side.module';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
-  declarations: [
-    DashboardListComponent
-  ],
+  declarations: [DashboardListComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
     DashboardRightSideModule,
     SelectButtonModule,
-    FormsModule
-  ]
+    FormsModule,
+    ChartModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}

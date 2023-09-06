@@ -1,11 +1,55 @@
-<div
-  class="dashboard_right_side flex flex-column align-items-center justify-content-evenly w-ful"
->
+<div class="dashboard_right_side flex flex-column align-items-center w-full">
 
-    <p class="head">Hourly Sales</p>
+  <div class="top flex  flex-column align-items-center mb-5">
+    <p class="head mb-5">Hourly Sales</p>
 
     <div class="card flex justify-content-center">
-      <!-- <p-chart type="radar" [data]="data" [options]="options"></p-chart> -->
+      <p-chart type="radar" [data]="data" [options]="options"></p-chart>
     </div>
-    <p class=".sub_heading">Sales by Station</p>
+  </div>
+  <div class="bottom flex  flex-column align-items-center">
+    <p class="head mb-5">Sales by Station</p>
+    <div class="raw w-full mb-5">
+      <div class="content flex justify-content-between mb-2">
+        <div class="left flex">
+          <img class="mr-2" src="../../../assets/images/pages/gas-station-black.svg" alt="">
+          <p>Station Name</p>
+        </div>
+        <div class="right">
+          <p>62.721㎥</p>
+        </div>
+      </div>
+      <div class="progress">
+        <p-progressBar [value]="50"></p-progressBar>
+      </div>
+    </div>
+    <div class="raw w-full mb-5">
+      <div class="content flex justify-content-between mb-2">
+        <div class="left flex">
+          <img class="mr-2" src="../../../assets/images/pages/gas-station-black.svg" alt="">
+          <p>Station Name</p>
+        </div>
+        <div class="right">
+          <p>62.721㎥</p>
+        </div>
+      </div>
+      <div class="progress">
+        <p-progressBar [value]="50"></p-progressBar>
+      </div>
+    </div>
+    <div class="raw_disable w-full mb-5">
+      <div class="content flex justify-content-between mb-2">
+        <div class="left flex">
+          <img class="mr-2" src="../../../assets/images/pages/gas-station-black.svg" alt="">
+          <p>Station Name</p>
+        </div>
+        <div class="right">
+          <p>NM</p>
+        </div>
+      </div>
+      <div class="progress">
+        <p-progressBar></p-progressBar>
+      </div>
+    </div>
+  </div>
 </div>
