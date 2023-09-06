@@ -38,6 +38,14 @@
   .date {
     width: 29rem;
     height: 2rem;
+    @media (max-width: 425px) {
+      margin-bottom: 1rem;
+    }
+    .start {
+      @media (max-width: 425px) {
+        margin-bottom: 1rem;
+      }
+    }
     .start,
     .end {
       height: 100%;
@@ -94,6 +102,9 @@
         font-family: "Montserrat-Bold";
         font-size: 0.8rem;
         padding: 0.5rem 2rem;
+        @media (max-width: 500px) {
+          padding: 0.5rem 1rem !important;
+        }
 
         .p-button-label {
           color: #3d5161;

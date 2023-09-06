@@ -8,17 +8,28 @@
   @media (max-width: 1076px) {
     width: 7%;
   }
+
   img {
     width: 2.5rem;
+    @media (max-width: 700px) {
+      width: 2rem;
+    }
   }
+
   .start_icon {
     width: 3.5rem;
+    @media (max-width: 700px) {
+      width: 2.5rem;
+    }
   }
   .icons {
     img {
       width: 2rem;
       height: 2rem;
       margin-bottom: 2rem;
+    }
+    .big {
+      width: 1.5rem;
     }
   }
 }

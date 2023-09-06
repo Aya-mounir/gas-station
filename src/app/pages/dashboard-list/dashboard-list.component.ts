@@ -6,28 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-list.component.scss'],
 })
 export class DashboardListComponent {
-  checked:boolean=false;
-  checked1:boolean=false;
-  checked2:boolean=false;
-  checked3:boolean=false;
-  checked4:boolean=false;
-  checked5:boolean=false;
+  checked: boolean = false;
+  checked1: boolean = false;
+  checked2: boolean = false;
+  checked3: boolean = false;
+  checked4: boolean = false;
+  checked5: boolean = false;
   stateOptions: any[] = [
     { label: 'GRAPH', value: 'GRAPH', icon: 'fa-solid fa-chart-simple' },
     { label: 'LIST', value: 'LIST', icon: 'fa-solid fa-bars' },
   ];
   value: string = 'LIST';
   data: any;
-
   options: any;
-
+  selected: boolean = false;
+  selected1: boolean = false;
+  selected2: boolean = false;
+  selected3: boolean = false;
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-color');
-    const textColorSecondary = documentStyle.getPropertyValue(
-      '--text-color-secondary'
-    );
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
     this.data = {
       labels: [
@@ -40,8 +37,8 @@ export class DashboardListComponent {
       datasets: [
         {
           label: 'My First dataset',
-          backgroundColor: documentStyle.getPropertyValue('#ff7f5c'),
-          borderColor: documentStyle.getPropertyValue('#ff7f5c'),
+          backgroundColor: documentStyle.getPropertyValue('--red-400'),
+          borderColor: documentStyle.getPropertyValue('--red-400'),
           data: [80, 81, 56, 55, 40],
         },
       ],
@@ -53,29 +50,29 @@ export class DashboardListComponent {
       plugins: {
         legend: {
           labels: {
-            color: textColor,
+            color: documentStyle.getPropertyValue('--primary-50'),
           },
         },
       },
       scales: {
         x: {
           ticks: {
-            color: documentStyle.getPropertyValue('#ff7f5c'),
+            color: documentStyle.getPropertyValue('--gray-900'),
             font: {
               weight: 50,
             },
           },
           grid: {
-            color: documentStyle.getPropertyValue('#ff7f5c'),
+            color: documentStyle.getPropertyValue('--bluegray-200'),
             drawBorder: false,
           },
         },
         y: {
           ticks: {
-            color: documentStyle.getPropertyValue('#ff7f5c'),
+            color: documentStyle.getPropertyValue('--gray-900'),
           },
           grid: {
-            color: documentStyle.getPropertyValue('#ff7f5c'),
+            color: documentStyle.getPropertyValue('--bluegray-200'),
             drawBorder: false,
           },
         },
