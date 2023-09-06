@@ -6,6 +6,9 @@ import { DashboardListComponent } from './dashboard-list/dashboard-list.componen
 import { DashboardRightSideModule } from '../global/dashboard-right-side/dashboard-right-side.module';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ButtonModule } from 'primeng/button';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FormsModule } from '@angular/forms';
     PagesRoutingModule,
     DashboardRightSideModule,
     SelectButtonModule,
-    FormsModule
+    FormsModule,
+    OverlayPanelModule,
+    ButtonModule,
+    CheckboxModule
   ]
 })
 export class PagesModule { }
