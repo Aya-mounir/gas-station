@@ -1,9 +1,14 @@
 .dashboard_right_side {
   display: fixed;
+  overflow: visible;
   padding: 2.5rem 2rem;
   min-height: calc(100vh - 7rem);
   @media (max-width: 700px) {
     min-height: calc(100vh - 12rem);
+  }
+  @media (max-width: 1300px) {
+    align-items: center;
+    justify-content: center;
   }
   @media (max-width: 453px) {
     min-height: calc(100vh - 18rem);

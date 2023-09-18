@@ -2,14 +2,22 @@
   .content {
     padding: 3rem 1rem 1rem 3rem;
     width: 75%;
-    .cards{
-      .card_selected{
+    @media (max-width: 1300px) {
+      width: 100%;
+      order: 2;
+      padding: 1rem !important;
+    }
+
+    .cards {
+      .card_selected {
         width: 13rem;
         padding: 1rem;
         margin: 0.5rem;
         border-radius: 24px;
         background: #f4dbd4;
-
+        @media (max-width: 550px) {
+          width: 100%;
+        }
         .amount {
           font-family: "Roboto-Regular";
           font-size: 2.4rem;
@@ -44,12 +52,15 @@
           color: #3d5161;
         }
       }
-      .card{
+      .card {
         width: 13rem;
         margin: 0.5rem;
         padding: 1rem;
         border-radius: 24px;
         background: #fff;
+        @media (max-width: 550px) {
+          width: 100%;
+        }
         .amount {
           font-family: "Roboto-Regular";
           font-size: 2.4rem;
@@ -101,18 +112,18 @@
         }
       }
     }
-    .container{
+    .container {
       height: calc(100vh - 440px);
       overflow-x: hidden;
       overflow-y: auto;
-      .list{
-
-        .row{
+      .list,
+      .graph {
+        .row {
           width: 98%;
           background: #fff;
           border-radius: 30px;
           padding: 1.5rem 1rem 0.5rem;
-          .header{
+          .header {
             .dot {
               height: 0.5rem;
               width: 0.5rem;
@@ -125,57 +136,109 @@
               height: 2rem;
               width: 2.35rem;
             }
-            p{
-              color: #3D5161;
-              font-family: 'Montserrat-Bold';
+            p {
+              color: #3d5161;
+              font-family: "Montserrat-Bold";
               font-size: 1rem;
             }
-            i{
-              color: #3D5161;
+            i {
+              color: #3d5161;
               font-size: 1.5rem;
               cursor: pointer;
             }
-
           }
-          hr{
-            border:1px #E0E7F1 solid;
+          hr {
+            border: 1px #e0e7f1 solid;
             height: 1px;
           }
-          .row_label{
+          .row_label {
             width: 33%;
             text-align: start;
             margin-bottom: 1rem;
-            .title,.value{
+            @media (max-width: 1044px) {
+              width: 50%;
+            }
+            @media (max-width: 750px) {
+              width: 100%;
+            }
+            .title,
+            .value {
               width: 49%;
             }
-            .title{
-              color: #3D5161;
-              font-family: 'Montserrat-Bold';
+            .title {
+              color: #3d5161;
+              font-family: "Montserrat-Bold";
               font-size: 0.8rem;
               margin-right: 10px;
             }
-            .value{
-              color: #3D5161;
-              font-family: 'Montserrat-Medium';
+            .value {
+              color: #3d5161;
+              font-family: "Montserrat-Medium";
               font-size: 0.8rem;
             }
           }
         }
-        .panel_row{
+        .panel_row {
           width: fit-content;
+        }
+      }
+      .graph {
+        .heading {
+          border-bottom: 3px solid transparent;
+        }
+        .right {
+          cursor: pointer;
+          p {
+            border-bottom: 3px solid transparent;
+          }
+        }
+        .selected {
+          color: #ff7f5c !important;
+          border-bottom: 3px solid #ff7f5c !important;
         }
       }
     }
   }
-  .right_Side{
+  .right_Side {
     width: 25%;
+    @media (max-width: 1300px) {
+      width: 100%;
+      order: 1 !important;
+    }
   }
 }
-::ng-deep{
-  .p-overlayPanel{
-    width: 50% !important;
+::ng-deep {
+  #dual-axes-chart {
+    text {
+      color: #fff !important;
+      cursor: default;
+      font-size: 0.7em !important;
+      fill: #fff !important;
+    }
+    .highcharts-data-label-connector {
+      fill: transparent !important;
+    }
+    .highcharts-background {
+      fill: transparent !important;
+      background-color: transparent;
+    }
+    .highcharts-title,
+    .highcharts-data-label,
+    .highcharts-credits {
+      display: none;
+    }
+    .highcharts-color-0 {
+      stroke: unset;
+    }
+    .highcharts-color-1 {
+      stroke: unset;
+      border-radius: 300.213px !important;
+    }
+    path.highcharts-point.highcharts-color-0 {
+      fill: #00acc3;
+    }
   }
-  .dashboard{
+  .dashboard {
     .p-selectbutton {
       height: 2rem;
       border-radius: 50px;
@@ -211,14 +274,11 @@
       }
     }
 
-    .container{
-
+    .container {
     }
   }
-
 }
-.container{
-
+.container {
 }
 ::-webkit-scrollbar {
   width: 20px;
@@ -230,7 +290,7 @@
   position: relative;
   height: 100% !important;
   border-radius: 5rem;
-  background: #F4DBD4;
+  background: #f4dbd4;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -261,7 +321,7 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 5rem;
   border: 1.494px solid rgba(255, 255, 255, 0.5);
-  background: #FF7F5C !important;
+  background: #ff7f5c !important;
   width: 5px !important;
   height: 6.4375rem !important;
   backdrop-filter: blur(22.40701675415039px);

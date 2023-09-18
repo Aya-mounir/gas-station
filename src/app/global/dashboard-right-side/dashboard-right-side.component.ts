@@ -12,10 +12,8 @@ export class DashboardRightSideComponent {
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-color');
-    const textColorSecondary = documentStyle.getPropertyValue(
-      '--text-color-secondary'
-    );
+    const textColor = documentStyle.getPropertyValue('--primary-50');
+    const textColorSecondary = documentStyle.getPropertyValue('--bluegray-200');
     this.data = {
       labels: [
         '24:00',
@@ -33,24 +31,30 @@ export class DashboardRightSideComponent {
       ],
       datasets: [
         {
-          borderColor: documentStyle.getPropertyValue('#009ACF'),
-          pointBackgroundColor: documentStyle.getPropertyValue('#009ACF'),
+          borderColor: documentStyle.getPropertyValue('--primary-200'),
+          pointBackgroundColor: documentStyle.getPropertyValue('--primary-100'),
           pointHoverBackgroundColor: textColor,
-          pointHoverBorderColor: documentStyle.getPropertyValue('#009ACF'),
+          pointHoverBorderColor:
+            documentStyle.getPropertyValue('--primary-100'),
           data: [65, 59, 90, 81, 56, 55, 40, 20, 10, 74, 56, 30],
         },
         {
-          borderColor: documentStyle.getPropertyValue('#009ACF'),
-          pointBackgroundColor: documentStyle.getPropertyValue('#009ACF'),
+          borderColor: documentStyle.getPropertyValue('--primary-300'),
+          pointBackgroundColor: documentStyle.getPropertyValue('--primary-100'),
           pointHoverBackgroundColor: textColor,
-          pointHoverBorderColor: documentStyle.getPropertyValue('#009ACF'),
+          pointHoverBorderColor:
+            documentStyle.getPropertyValue('--primary-100'),
           data: [28, 48, 40, 19, 96, 27, 100, 60, 20, 80, 11, 90],
         },
       ],
     };
     this.options = {
       plugins: {
-        legend: {},
+        legend: {
+          labels: {
+            color: documentStyle.getPropertyValue('--primary-50'),
+          },
+        },
       },
       scales: {
         r: {

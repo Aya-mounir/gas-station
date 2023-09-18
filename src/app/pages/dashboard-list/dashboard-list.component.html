@@ -1,4 +1,4 @@
-<div class="dashboard flex w-full justify-content-between">
+<div class="dashboard flex grid w-full justify-content-between">
   <div class="content">
     <div class="cards justify-content-evenly flex grid">
       <div class="card_selected flex flex-column justify-content-between">
@@ -35,12 +35,8 @@
       </div>
     </div>
     <div class="card flex justify-content-end my-5 w-full">
-      <p-selectButton
-        [options]="stateOptions"
-        [(ngModel)]="value"
-        optionLabel="label"
-        optionValue="value"
-      ></p-selectButton>
+      <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label"
+        optionValue="value"></p-selectButton>
     </div>
     <div class="container">
       <div class="list" *ngIf="value == 'LIST'">
@@ -48,11 +44,7 @@
           <div class="header mb-2 flex justify-content-between">
             <div class="left flex align-items-end">
               <span class="dot"></span>
-              <img
-                class="mx-2"
-                src="../../../assets/images/gas-station-favicon.svg"
-                alt=""
-              />
+              <img class="mx-2" src="../../../assets/images/gas-station-favicon.svg" alt="" />
               <p class="heading">STATION NAME DUMMY</p>
             </div>
             <div class="right">
@@ -65,53 +57,29 @@
                   <div class="grid">
                     <div class="col-6">
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked"></p-checkbox>
                         <p>Total Sales</p>
                       </div>
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked1"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked1"></p-checkbox>
                         <p>Total Transaction</p>
                       </div>
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked2"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked2"></p-checkbox>
                         <p>Total Value</p>
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked3"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked3"></p-checkbox>
                         <p>Total Sales</p>
                       </div>
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked4"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked4"></p-checkbox>
                         <p>Total Transaction</p>
                       </div>
                       <div class="panel_row flex">
-                        <p-checkbox
-                          value="mark"
-                          class="mr-1"
-                          [(ngModel)]="checked5"
-                        ></p-checkbox>
+                        <p-checkbox value="mark" class="mr-1" [(ngModel)]="checked5"></p-checkbox>
                         <p>Total Value</p>
                       </div>
                     </div>
@@ -154,11 +122,52 @@
           <div class="header mb-2 flex justify-content-between">
             <div class="left flex align-items-end">
               <span class="dot"></span>
-              <img
-                class="mx-2"
-                src="../../../assets/images/gas-station-favicon.svg"
-                alt=""
-              />
+              <img class="mx-2" src="../../../assets/images/gas-station-favicon.svg" alt="" />
+              <p class="heading">STATION NAME DUMMY</p>
+            </div>
+            <div class="right">
+              <i class="pi pi-ellipsis-h" (click)="op.toggle($event)"></i>
+
+              <div class="card flex justify-content-center">
+                <p-overlayPanel #op> </p-overlayPanel>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="content w-full">
+            <div class="content_row flex grid w-full justify-content-between">
+              <div class="flex row_label">
+                <p class="title">Total Sales</p>
+                <p class="value">62.721 ㎥</p>
+              </div>
+              <div class="flex row_label">
+                <p class="title">Compression State</p>
+                <p class="value">Compression</p>
+              </div>
+              <div class="flex row_label">
+                <p class="title">Max Transaction/hour</p>
+                <p class="value">20</p>
+              </div>
+              <div class="flex row_label">
+                <p class="title">Total Value</p>
+                <p class="value">550 EGP</p>
+              </div>
+              <div class="flex row_label">
+                <p class="title">Total Transaction Count</p>
+                <p class="value">5161</p>
+              </div>
+              <div class="flex row_label">
+                <p class="title">Max Transaction Date-Time</p>
+                <p class="value">8-1-2021 | 10:16 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="header mb-2 flex justify-content-between">
+            <div class="left flex align-items-end">
+              <span class="dot"></span>
+              <img class="mx-2" src="../../../assets/images/gas-station-favicon.svg" alt="" />
               <p class="heading">STATION NAME DUMMY</p>
             </div>
             <div class="right">
@@ -201,10 +210,26 @@
         </div>
       </div>
       <div class="graph w-full" *ngIf="value=='GRAPH'">
-        <div class="card">
-          <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+        <div class="row">
+          <div class="header mb-2 flex justify-content-evenly">
+            <div class="left flex align-items-end">
+              <p class="heading py-3">STATIONS ACTIVATES OVERVIEW</p>
+            </div>
+            <div class="right flex">
+              <p [ngClass]="selected==true?'selected':''" (click)="selected=!selected" class="py-3 mx-2">SALES</p>
+              <p [ngClass]="selected1==true?'selected':''" (click)="selected1=!selected1" class="py-3 mx-2">TRANSACTION
+              </p>
+              <p [ngClass]="selected2==true?'selected':''" (click)="selected2=!selected2" class="py-3 mx-2">VALUE</p>
+              <p [ngClass]="selected3==true?'selected':''" (click)="selected3=!selected3" class="py-3 mx-2">COMPRESSION
+              </p>
+            </div>
+          </div>
+          <hr>
+          <p-chart style="stroke-width: 2px;" type="bar" [data]="data" [options]="options">
+          </p-chart>
         </div>
-      </div>    </div>
+      </div>
+    </div>
   </div>
   <!-- right side -->
   <app-dashboard-right-side class="right_Side"></app-dashboard-right-side>
