@@ -9,7 +9,7 @@ import { Meta, Title } from '@angular/platform-browser';
 export class AppComponent {
     salonName: string='ppink';
     siteName: any = 'بينك'; // Initialize with a default name
-    salonImage: any = '../apple-touch-icon.png'
+    salonImage: any = './../assets/images/gas-station-favicon.svg'
   constructor(private meta: Meta, private title: Title){}
   updateTitle(title: string = 'Pink') {
     if (title) {
