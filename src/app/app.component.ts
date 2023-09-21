@@ -19,7 +19,7 @@ export class AppComponent {
         content: 'Article Description'
       },
       { name: 'robots', content: 'index,follow' },
-      { property: 'og:title', content: 'Content Title' }
+      { name: 'title', content: 'Content Title' }
    ]);
   }
 }
