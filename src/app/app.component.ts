@@ -20,7 +20,7 @@ ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
   // var link:HTMLLinkElement = document.querySelector('link[rel="icon"]');
-  this.updateTitle()
+  this.updateTitle('تتتاتلااب')
   this.meta.addTag({ name: 'description', content: 'بينك سيستم لخدمات التجميل و السبا' });
   this.meta.updateTag({ name: 'description', content: 'بينك سيستم لخدمات التجميل و السبا' });
   // link.href = `./../apple-touch-icon.png`;
